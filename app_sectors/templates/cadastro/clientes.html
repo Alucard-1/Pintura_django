@@ -1,4 +1,10 @@
-{% load static %}
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+</head>
 
 <div class="container">
   <table>
@@ -6,12 +12,14 @@
       <th>id</th>
       <th>nome</th>
       <th>idade</th>
+      <th>foto</th>
     </tr>
     {%for cliente in clientes%}
     <tr>
       <td>{{cliente.id_cliente}}</td>
       <td>{{cliente.nome}}</td>
       <td>{{cliente.idade}}</td>
+      <td><img src="{{ cliente.foto.url }}" alt="{{ cliente.nome }}" width="100"></td>
     </tr>
     {%endfor%}
   </table>
