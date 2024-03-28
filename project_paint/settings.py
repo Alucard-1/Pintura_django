@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     "app_sectors",
 ]
 
@@ -134,3 +135,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Defina a URL base para os arquivos de mídia
 MEDIA_URL = "/media/"
+
+SHELL_PLUS = "ipython"

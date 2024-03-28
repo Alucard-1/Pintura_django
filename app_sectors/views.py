@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 
 from .models import lista_clientes
 
@@ -16,11 +16,12 @@ def insumos(request):
 
 
 def clientes(request):
-    novo_cliente = lista_clientes()
-    novo_cliente.nome = request.POST.get("nome")
-    novo_cliente.idade = request.POST.get("idade")
-    novo_cliente.foto = request.FILES.get("foto")
-    novo_cliente.save()
+    if request.method == "POST":
+        novo_cliente = lista_clientes()
+        novo_cliente.nome = request.POST.get("nome")
+        novo_cliente.idade = request.POST.get("idade")
+        novo_cliente.foto = request.FILES.get("foto")
+        novo_cliente.save()
 
     clientes = {"clientes": lista_clientes.objects.all()}
 

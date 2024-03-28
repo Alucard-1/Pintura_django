@@ -2,6 +2,15 @@
 
 <div class="container">
   <h1>Cadastro de Clientes</h1>
+
+  <main>
+    <a href="{% url 'home' %}" class="btn btn-primary">Página de cadastro</a>
+    <a href="{% url 'clientes' %}" class="btn btn-primary">Página de clientes</a>
+    <a href="{% url 'insumos' %}" class="btn btn-primary">Página de insumos</a>
+    <a href="{% url 'initial' %}" class="btn btn-primary">Home</a>
+  </main>
+
+  
   <form  action="{%url 'clientes'%}" method = "post" enctype="multipart/form-data">
     {% csrf_token %}
     <div>

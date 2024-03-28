@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Clientes</title>
 </head>
+<header>
+  <h1>Lista de clientes</h1>
+  <main>
+    <a href="{% url 'home' %}" class="btn btn-primary">Página de cadastro</a>
+    <a href="{% url 'clientes' %}" class="btn btn-primary">Página de clientes</a>
+    <a href="{% url 'insumos' %}" class="btn btn-primary">Página de insumos</a>
+    <a href="{% url 'initial' %}" class="btn btn-primary">Home</a>
+  </main>
+</header>
 
 <div class="container">
   <table>
